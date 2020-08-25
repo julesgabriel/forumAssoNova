@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    max-height: 9vh;
+    background: #101622;
+    justify-content: space-between;
+}
+
+.containerLogoForum {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+}
+
+.logotype {
+    width: 15%;
+    border-right: 1px solid white
+}
+
+.logotype img {
+    width: 90%;
+}
+
+.forumAsso {
+    width: 60%;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.logotype, .forumAsso {
+    margin: 10px 0;
+}
+
+.containerLogoPulv {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.containerLogoPulv img {
+    width: 35%;
+    margin: auto;
+}
+
+.containerBurger {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerBurger div {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+}
