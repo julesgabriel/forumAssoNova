@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "associations",
+  "info": {
+    "name": "association"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "category": {
+      "model": "categories",
+      "via": "associations"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "urlForm": {
+      "type": "string"
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "reseaux_sociaux": {
+      "via": "association",
+      "collection": "reseaux-sociaux"
+    }
+  }
+}

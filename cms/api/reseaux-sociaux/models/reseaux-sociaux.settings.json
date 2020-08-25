@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reseaux_sociauxes",
+  "info": {
+    "name": "reseaux"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "reseau": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "LinkedIn",
+        "Twitter",
+        "Pinterest",
+        "Twitch",
+        "Tiktok"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "association": {
+      "model": "association",
+      "via": "reseaux_sociaux"
+    }
+  }
+}
