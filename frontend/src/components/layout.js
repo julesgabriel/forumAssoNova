@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 import {useStaticQuery, graphql} from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
-import Img from 'gatsby-image';
+import Link from 'gatsby-link';
+
 
 const Layout = ({children}) => {
     const data = useStaticQuery(graphql`
@@ -34,15 +34,36 @@ query navBarData {
     edges {
       node {
         title
+        url
       }
     }
   }
 }
 `)
 
+    const [state, setState] = useState({
+        initialClass: "containerResponsiveMenu"
+    })
+
+    const handleMenu = () => {
+        if (state.initialClass === "containerResponsiveMenu") {
+            setState({
+                initialClass: "containerResponsiveMenu block"
+            })
+        } else {
+            setState({
+                initialClass: "containerResponsiveMenu out"
+            })
+            setTimeout(function () {
+                setState({
+                    initialClass: "containerResponsiveMenu"
+                })
+            }, 600)
+        }
+    }
 
     return (
-        <>
+        <main>
             <header>
                 <div className="containerLogoForum">
                     <div className="divLogoForum">
@@ -51,7 +72,7 @@ query navBarData {
                                  alt={data.allStrapiCommons.edges[0].node.title}/>
                         </div>
                         <div className="forumAsso">
-                            Forum Associatif Digitale
+                            <span className="navSpan">Forum Associatif Digitale</span>
                         </div>
                     </div>
                 </div>
@@ -61,11 +82,25 @@ query navBarData {
                 </div>
                 <div className="containerMenu">
                     <div className="divMenu">
+                        <div className={state.initialClass}>
+                            <div className="cross" onClick={handleMenu}>
+                                &#x2715;
+                            </div>
+                            <nav>
+                                <ul>
+                                    {data.allStrapiCategories.edges.map(document => (
+                                        <Link to={`/${document.node.url}`}>
+                                            <li>{document.node.title}</li>
+                                        </Link>
+                                    ))}
+                                </ul>
+                            </nav>
+                        </div>
                         <div className="categoriesSpan">
-                            Catégories d'associations
+                            <span className="navSpan">Catégories d'associations</span>
                         </div>
                         <div className="containerBurger">
-                            <div className="contentBurger">
+                            <div className="contentBurger" onClick={handleMenu}>
                                 <div></div>
                                 <div></div>
                                 <div></div>
@@ -78,19 +113,28 @@ query navBarData {
                                  alt={data.allStrapiCommons.edges[2].node.title}/>
                         </div>
                     </div>
-
                 </div>
 
             </header>
-
             <main>{children}</main>
             <footer>
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
+                <div className="containerSchoolLogo">
+                    <img src="" alt=""/>
+                    <img src="" alt=""/>
+                    <img src="" alt=""/>
+                </div>
+                <div className="containerCgu">
+                    <ul>
+                        <Link to="/mentions-legales"><li>Mentions légales</li></Link>
+                        <Link to="/cgu"><li>Conditions Générales d'utilisation</li></Link>
+                    </ul>
 
-        </>
+                </div>
+                <div className="containerPulvSocialNetworks">
+
+                </div>
+            </footer>
+        </main>
     )
 }
 

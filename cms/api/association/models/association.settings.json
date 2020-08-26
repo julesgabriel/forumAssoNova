@@ -16,8 +16,8 @@
       "type": "richtext"
     },
     "category": {
-      "model": "categories",
-      "via": "associations"
+      "via": "associations",
+      "model": "categories"
     },
     "images": {
       "collection": "file",

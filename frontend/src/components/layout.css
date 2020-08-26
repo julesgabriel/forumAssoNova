@@ -3,12 +3,16 @@
     padding: 0;
 }
 
+main {
+    background: #1A1A1A;
+}
+
 header {
     display: flex;
     max-height: 9vh;
-    background: darkgray;
+    background: #2E2E2E;
     justify-content: space-between;
-    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
 }
 
 .containerLogoForum, .containerMenu {
@@ -18,7 +22,7 @@ header {
 }
 
 .containerMenu, .containerBurger {
-    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
 }
 
 .logotype {
@@ -58,11 +62,11 @@ header {
 .forumAsso, .categoriesSpan {
     font-size: 1vw;
     font-weight: revert;
-    color: #fff;
+    color: #EDEDED;
 }
 
 .forumAsso {
-    border-left: 1px solid white;
+    border-left: 1px solid #EDEDED;
     padding: 10px 15px;
 }
 
@@ -91,8 +95,9 @@ header {
     height: 30%;
     flex-direction: column;
     justify-content: space-around;
-    border-left: 1px solid white;
+    border-left: 1px solid #EDEDED;
     padding: 10px 0;
+    cursor: pointer;
 }
 
 .contentBurger div {
@@ -128,12 +133,162 @@ header {
 }
 
 .contentBurger, .containerLogoDiscord {
-    border-left: 1px solid white;
+    border-left: 1px solid #EDEDED;
 }
 
 .containerDiscord img {
     width: 100%;
     border-radius: 90%;
+}
+
+.containerResponsiveMenu {
+    display: none;
+}
+
+/**.containerResponsiveMenu {
+    display: block;
+    position: absolute;
+    top:8.5vh;
+    background: #2E2E2E;
+    padding: 5px 15px 0 15px;
+}
+
+.containerResponsiveMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15vh;
+}
+
+.containerResponsiveMenu li {
+    list-style: none;
+    text-align: left;
+    color: #EDEDED;
+}*/
+
+.containerResponsiveMenu {
+    display: none;
+    background: #2E2E2E;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    position: fixed;
+
+}
+
+.out {
+    display: block !important;
+    transform: translate3d(110%, 0, 0);
+    animation: test 0.5s ease-in-out;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.block {
+    display: block !important;
+    transform: translate3d(0, 0, 0);
+    animation: test 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes test {
+    from {
+        opacity: 0;
+        transform: translate3d(110%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.containerResponsiveMenu nav {
+    height: 100%;
+}
+
+.containerResponsiveMenu nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.containerResponsiveMenu nav ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 5vw;
+    color: #EDEDED;
+    width: fit-content;
+    margin: 0 auto;
+    -webkit-text-fill-color: rgba(231, 65, 17, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ededed;
+    transition: 1s;
+}
+
+.containerResponsiveMenu nav ul li:hover {
+    -webkit-text-fill-color: #e74111;
+    -webkit-text-stroke-color: #e74111;
+    filter: blur(0) !important;
+    transition: 1s;
+}
+
+.containerResponsiveMenu nav ul li {
+    filter: blur(1px);
+}
+
+a {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.cross {
+    position: absolute;
+    font-size: 50px;
+    top: 3vh;
+    right: 3vw;
+    color: #EDEDED;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.cross:hover {
+    color: #e74111;
+    transition: 0.2s;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background: #2E2E2E;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer li {
+    list-style: none;
+    color: #EDEDED;
+    margin: 10px 0;
+}
+
+.containerSchoolLogo img {
+    min-width: 25%;
+    background: #EDEDED;
+    border-radius: 90%;
+}
+
+.containerPulvSocialNetworks, .containerCgu, .containerSchoolLogo {
+    width: 33%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.containerCgu ul {
+    margin: auto;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -171,5 +326,32 @@ header {
     .containerMenu, .containerBurger {
         box-shadow: none;
     }
+}
 
+/*
+Global Font Color etc...
+*/
+
+h1, h2, h3, p, span, .navSpan, li, a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navSpan, li, a {
+    font-weight: bold;
+}
+
+h1, h2, h3, p {
+    color: #EDEDED;
+}
+
+a:visited {
+    color: #2E2E2E;
+}
+
+a:not(:visited) {
+    color: #2E2E2E;
+}
+
+span {
+    color: #e74111;
 }
