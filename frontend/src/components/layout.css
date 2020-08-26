@@ -6,57 +6,132 @@
 header {
     display: flex;
     max-height: 9vh;
-    background: #101622;
+    background: darkgray;
     justify-content: space-between;
+    box-shadow: 1px 0 6px rgba(0,0,0,0.4);
 }
 
-.containerLogoForum {
+.containerLogoForum, .containerMenu {
     display: flex;
-    width: 20%;
     align-items: center;
     text-align: center;
 }
 
+.containerMenu, .containerBurger {
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.4);
+}
+
 .logotype {
-    width: 15%;
-    border-right: 1px solid white
+    width: 20%;
+}
+
+.divLogoForum {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
 }
 
 .logotype img {
     width: 90%;
 }
 
-.forumAsso {
-    width: 60%;
-    font-size: 20px;
-    font-weight: lighter;
-    color: #fff;
+.divMenu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
 }
 
-.logotype, .forumAsso {
-    margin: 10px 0;
-}
 
 .containerLogoPulv {
-    width: 20%;
     display: flex;
     align-items: center;
 }
 
 .containerLogoPulv img {
-    width: 35%;
+    width: 20%;
     margin: auto;
 }
 
-.containerBurger {
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.forumAsso, .categoriesSpan {
+    font-size: 18px;
+    font-weight: revert;
+    color: #fff;
 }
 
-.containerBurger div {
-    width: 35px;
+.forumAsso {
+    border-left: 1px solid white;
+    padding: 10px 15px;
+}
+
+.categoriesSpan {
+    padding: 10px 0;
+}
+
+.categoriesSpan {
+    color: #e74111;
+}
+
+.categoriesSpan, .forumAsso {
+    text-align: center;
+}
+
+.containerBurger {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contentBurger{
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid white;
+    padding: 10px 0;
+}
+
+.contentBurger div {
+    width: 50%;
+    margin: 0 auto;
     height: 2px;
-    background-color: white;
+    background: #e74111;
+}
+
+.containerLogoForum, .containerLogoPulv, .containerMenu {
+    width: 33%;
+}
+
+.containerDiscord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    margin-right: 50px;
+}
+
+.categoriesSpan {
+    width: 40%;
+    margin-right: 15px;
+}
+
+.containerLogoDiscord {
+    width: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.contentBurger, .containerLogoDiscord {
+    border-left: 1px solid white;
+}
+
+.containerDiscord img {
+    width: 100%;
+    border-radius: 90%;
 }

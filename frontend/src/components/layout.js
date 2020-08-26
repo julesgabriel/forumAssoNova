@@ -45,28 +45,42 @@ query navBarData {
         <>
             <header>
                 <div className="containerLogoForum">
-                    <div className="logotype">
-                        <img src={data.allStrapiCommons.edges[0].node.logo.childImageSharp.fixed.src}
-                             alt={data.allStrapiCommons.edges[0].node.title}/>
-                    </div>
-                    <div className="forumAsso">
-                        Forum Associatif Digitale
+                    <div className="divLogoForum">
+                        <div className="logotype">
+                            <img src={data.allStrapiCommons.edges[0].node.logo.childImageSharp.fixed.src}
+                                 alt={data.allStrapiCommons.edges[0].node.title}/>
+                        </div>
+                        <div className="forumAsso">
+                            Forum Associatif Digitale
+                        </div>
                     </div>
                 </div>
                 <div className="containerLogoPulv">
                     <img src={data.allStrapiCommons.edges[1].node.logo.childImageSharp.fixed.src}
                          alt={data.allStrapiCommons.edges[1].node.title}/>
                 </div>
-                <div className="containerLogoForum">
-                    <div className="forumAsso">
-                        Forum Associatif Digitale
+                <div className="containerMenu">
+                    <div className="divMenu">
+                        <div className="categoriesSpan">
+                            Catégories d'associations
+                        </div>
+                        <div className="containerBurger">
+                            <div className="contentBurger">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="containerBurger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div className="containerDiscord">
+                        <div className="containerLogoDiscord">
+                            <img src={data.allStrapiCommons.edges[2].node.logo.childImageSharp.fixed.src}
+                                 alt={data.allStrapiCommons.edges[2].node.title}/>
+                        </div>
                     </div>
+
                 </div>
+
             </header>
 
             <main>{children}</main>
