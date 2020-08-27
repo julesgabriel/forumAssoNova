@@ -22,6 +22,9 @@
     },
     "title": {
       "type": "string"
+    },
+    "urlVideo": {
+      "type": "string"
     }
   }
 }

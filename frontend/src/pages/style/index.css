@@ -5,9 +5,15 @@
 
 .keyNumbersSection, .titleSection {
     width: 70%;
+}
+
+.titleSection {
     margin: 0 auto;
 }
 
+.keyNumbersSection {
+    margin: 0 auto 3vw auto;
+}
 
 .keyNumbersSection ol {
     width: 85%;
@@ -47,7 +53,6 @@
     .titleSection h1 {
         padding: 3vw 0;
     }
-
 }
 
 .titleSection strong {
@@ -63,6 +68,10 @@
     font-size: 0.8vw;
 }
 
+.sectionPresentation span {
+    font-size: 0.9vw;
+}
+
 @media (max-width: 768px) {
     .boldText {
         font-size: 1.5vw;
@@ -75,7 +84,6 @@
     .sectionPresentation {
         margin: 1.5vh auto 2.5vh auto !important;
     }
-
 }
 
 .positionText {
@@ -89,4 +97,75 @@
 .sectionPresentation {
     width: 70%;
     margin: 30px auto 45px auto;
+}
+
+.videoSection {
+    display: flex;
+    justify-content: center;
+}
+
+.videoSection iframe {
+    border-radius: 10px;
+    width: 60vw;
+    height: 35vw;
+}
+
+
+.discordSectionHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3vw 0 0 0;
+    padding: 1vw 0;
+    background: #212121;
+    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.16);
+    text-align: center;
+    height: 15vh
+}
+
+.buttonDiscord {
+    transition: 0.2s;
+}
+
+.buttonDiscord:hover {
+    box-shadow: 0 0 5px rgba(231, 65, 17, 0.8);
+    text-shadow: 0 0 1px rgba(231, 65, 17, 1);
+    transition: 0.3s;
+}
+
+.bounce {
+    animation: test 6s ease-in-out infinite;
+    transition: all 0.3s;
+}
+
+@keyframes test {
+    0% {
+        position: relative;
+        bottom: 0;
+        text-shadow: 0 0 4px rgba(231, 65, 17, 0.5);
+    }
+
+    6% {
+        bottom: 0.7vw;
+    }
+
+    12% {
+        position: relative;
+        bottom: 0;
+    }
+
+    18% {
+        bottom: 0.7vw;
+    }
+
+    25% {
+        bottom: 0;
+        text-shadow: 0 0 1px #e74111;
+    }
+
+    100% {
+        text-shadow: none;
+        position: relative;
+        bottom: 0;
+    }
 }

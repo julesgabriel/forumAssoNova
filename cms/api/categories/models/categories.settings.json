@@ -16,8 +16,8 @@
       "type": "richtext"
     },
     "associations": {
-      "collection": "association",
-      "via": "category"
+      "via": "category",
+      "collection": "association"
     },
     "url": {
       "type": "string"

@@ -28,8 +28,8 @@
       "type": "string"
     },
     "association": {
-      "model": "association",
-      "via": "reseaux_sociaux"
+      "via": "reseaux_sociaux",
+      "model": "association"
     }
   }
 }

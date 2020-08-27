@@ -16,8 +16,8 @@
       "type": "richtext"
     },
     "category": {
-      "via": "associations",
-      "model": "categories"
+      "model": "categories",
+      "via": "associations"
     },
     "images": {
       "collection": "file",
@@ -33,20 +33,12 @@
     "urlForm": {
       "type": "string"
     },
-    "video": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "reseaux_sociaux": {
-      "via": "association",
-      "collection": "reseaux-sociaux"
+      "collection": "reseaux-sociaux",
+      "via": "association"
+    },
+    "urlVideo": {
+      "type": "string"
     }
   }
 }
