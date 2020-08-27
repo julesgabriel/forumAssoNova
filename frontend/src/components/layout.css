@@ -3,15 +3,23 @@
     padding: 0;
 }
 
+*::selection {
+    color: #e74111;
+}
+
+* span::selection{
+    color: #EDEDED;
+}
+
 main {
     background: #1A1A1A;
 }
 
 header {
     display: flex;
-    max-height: 9vh;
     background: #2E2E2E;
     justify-content: space-between;
+    max-height: 7vh;
     box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
 }
 
@@ -101,9 +109,9 @@ header {
 }
 
 .contentBurger div {
-    width: 50%;
+    width: 1.8vw;
     margin: 0 auto;
-    height: 2px;
+    height: 0.2vw;
     background: #e74111;
 }
 
@@ -231,13 +239,9 @@ header {
 .containerResponsiveMenu nav ul li:hover {
     -webkit-text-fill-color: #e74111;
     -webkit-text-stroke-color: #e74111;
-    filter: blur(0) !important;
     transition: 1s;
 }
 
-.containerResponsiveMenu nav ul li {
-    filter: blur(1px);
-}
 
 a {
     width: fit-content;
@@ -246,8 +250,9 @@ a {
 
 .cross {
     position: absolute;
-    font-size: 50px;
+    font-size: 8vw;
     top: 3vh;
+    z-index: 7000;
     right: 3vw;
     color: #EDEDED;
     transition: color 0.2s;
@@ -291,7 +296,39 @@ footer li {
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    header {
+        padding-bottom: 2vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .cross {
+        top: 1vh;
+        right: -10vh;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    header {
+        padding-bottom: 3vh;
+    }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+    .cross {
+        top: 1vh;
+        right: -14vh;
+    }
+}
+
+
 @media (max-width: 768px) {
+    header {
+        padding-bottom: 1vh;
+    }
+
+
     .forumAsso, .categoriesSpan, .containerDiscord {
         display: none;
     }
@@ -309,7 +346,6 @@ footer li {
     .logotype img, .containerLogoPulv img {
         width: 100%;
     }
-
 
     .containerMenu div {
         width: 75%;
@@ -332,15 +368,20 @@ footer li {
 Global Font Color etc...
 */
 
-h1, h2, h3, p, span, .navSpan, li, a {
+h1, h2, h3, p, span, .navSpan, li, a, strong {
     font-family: 'Montserrat', sans-serif;
 }
 
-.navSpan, li, a {
-    font-weight: bold;
+strong {
+    font-size: 1vw;
 }
 
-h1, h2, h3, p {
+.navSpan, li, a, span, h1, strong {
+    font-weight: bold;
+    font-size: 0.9vw;
+}
+
+h1, h2, h3, p, strong {
     color: #EDEDED;
 }
 

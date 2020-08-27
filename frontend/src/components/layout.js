@@ -41,11 +41,22 @@ query navBarData {
 }
 `)
 
+
+
+    /**
+     *  const indexArray = [];
+     * for (let i = 0; i < data.allStrapiCommons.edges.length; i++) {
+        let index = data.allStrapiCommons.edges.findIndex(document => document.node.title === data.allStrapiCommons.edges[i].node.title);
+        indexArray.push(index);
+    } */
+
+
     const [state, setState] = useState({
         initialClass: "containerResponsiveMenu"
     })
 
     const handleMenu = () => {
+
         if (state.initialClass === "containerResponsiveMenu") {
             setState({
                 initialClass: "containerResponsiveMenu block"
@@ -125,8 +136,12 @@ query navBarData {
                 </div>
                 <div className="containerCgu">
                     <ul>
-                        <Link to="/mentions-legales"><li>Mentions légales</li></Link>
-                        <Link to="/cgu"><li>Conditions Générales d'utilisation</li></Link>
+                        <Link to="/mentions-legales">
+                            <li>Mentions légales</li>
+                        </Link>
+                        <Link to="/cgu">
+                            <li>Conditions Générales d'utilisation</li>
+                        </Link>
                     </ul>
 
                 </div>
