@@ -28,8 +28,13 @@
       "type": "string"
     },
     "association": {
+<<<<<<< HEAD
       "via": "reseaux_sociaux",
       "model": "association"
+=======
+      "model": "association",
+      "via": "reseaux_sociaux"
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     }
   }
 }

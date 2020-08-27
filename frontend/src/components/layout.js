@@ -40,7 +40,13 @@ query navBarData {
   }
 }
 `)
+<<<<<<< HEAD
     
+=======
+
+
+
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     /**
      *  const indexArray = [];
      * for (let i = 0; i < data.allStrapiCommons.edges.length; i++) {

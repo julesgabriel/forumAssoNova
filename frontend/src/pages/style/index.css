@@ -5,6 +5,7 @@
 
 .keyNumbersSection, .titleSection {
     width: 70%;
+<<<<<<< HEAD
 }
 
 .titleSection {
@@ -14,6 +15,11 @@
 .keyNumbersSection {
     margin: 0 auto 3vw auto;
 }
+=======
+    margin: 0 auto;
+}
+
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 
 .keyNumbersSection ol {
     width: 85%;
@@ -53,6 +59,10 @@
     .titleSection h1 {
         padding: 3vw 0;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 }
 
 .titleSection strong {
@@ -68,10 +78,13 @@
     font-size: 0.8vw;
 }
 
+<<<<<<< HEAD
 .sectionPresentation span {
     font-size: 0.9vw;
 }
 
+=======
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 @media (max-width: 768px) {
     .boldText {
         font-size: 1.5vw;
@@ -84,6 +97,10 @@
     .sectionPresentation {
         margin: 1.5vh auto 2.5vh auto !important;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 }
 
 .positionText {
@@ -98,6 +115,7 @@
     width: 70%;
     margin: 30px auto 45px auto;
 }
+<<<<<<< HEAD
 
 .videoSection {
     display: flex;
@@ -169,3 +187,5 @@
         bottom: 0;
     }
 }
+=======
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5

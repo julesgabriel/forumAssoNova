@@ -7,7 +7,11 @@
     color: #e74111;
 }
 
+<<<<<<< HEAD
 * span::selection, * h2::selection{
+=======
+* span::selection{
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     color: #EDEDED;
 }
 
@@ -242,6 +246,10 @@ header {
     transition: 1s;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 a {
     width: fit-content;
     margin: 0 auto;
@@ -268,7 +276,10 @@ footer {
     height: 10vh;
     background: #2E2E2E;
     display: flex;
+<<<<<<< HEAD
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.16);
+=======
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     justify-content: space-around;
 }
 
@@ -381,9 +392,14 @@ strong {
     font-size: 0.9vw;
 }
 
+<<<<<<< HEAD
 h1, h3, p, strong {
     color: #EDEDED;
     font-size: 1vw;
+=======
+h1, h2, h3, p, strong {
+    color: #EDEDED;
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 }
 
 a:visited {
@@ -394,6 +410,7 @@ a:not(:visited) {
     color: #2E2E2E;
 }
 
+<<<<<<< HEAD
 span, h2{
     color: #e74111;
 }
@@ -405,3 +422,8 @@ span{
 h2{
     font-size: 1.5vw;
 }
+=======
+span {
+    color: #e74111;
+}
+>>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
