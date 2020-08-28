@@ -18,12 +18,9 @@
     "react": "^16.12.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.12.0",
-<<<<<<< HEAD
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.1.1"
-=======
+    "styled-components": "^5.1.1",
     "react-helmet": "^6.1.0"
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
+
   },
   "devDependencies": {
     "gatsby-link": "^2.4.13",

@@ -1,0 +1,153 @@
+.sectionCategories {
+    width: 70%;
+    height: 55.6vh;
+    margin: 3vw auto 19vh auto;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .sectionCategories {
+        height: 63vh;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .sectionCategories {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1441px) {
+    .sectionCategories {
+        margin: 3vw auto 20vh auto;
+    }
+}
+
+
+@media (min-width: 664px) and (max-width: 769px) {
+    .sectionCategories nav ul div {
+        padding: 1.2vh 3vh !important;
+    }
+
+    .sectionCategories {
+        height: 63vh;
+    }
+
+    .sectionCategories nav ul li {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 574px) and (max-width: 663px) {
+    .sectionCategories {
+        height: 64vh;
+    }
+}
+
+@media (max-width: 573px) {
+    .sectionCategories {
+        height: 67vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .sectionCategories {
+        text-align: center;
+    }
+
+    .sectionCategories nav ul {
+        align-items: center;
+    }
+
+    .sectionCategories nav ul div {
+        width: 40% !important;
+        padding: 1vh 3vh !important;
+    }
+
+    .sectionCategories li {
+        font-size: 3vw !important;
+    }
+
+    .sectionCategories li span {
+        font-size: 3vw !important;
+    }
+
+    .sectionCategories h1 {
+        width: 100% !important;
+        font-size: 6vw !important;
+    }
+
+}
+
+.sectionCategories h1 {
+    width: 60%;
+    padding: 0 0 2vw 0;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+.sectionCategories a {
+    text-decoration: none;
+    color: #ededed;
+}
+
+.sectionCategories ul {
+    height: 30vh;
+}
+
+.sectionCategories li {
+    list-style: circle;
+    color: #e74111;
+    font-size: 1vw;
+}
+
+.sectionCategories li span {
+    color: #ededed;
+    font-size: 1vw;
+}
+
+@media (max-width: 1024px) {
+    .sectionCategories li span {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionCategories nav {
+        margin-top: 2vw;
+    }
+
+    .sectionCategories nav ul {
+        height: 80%;
+        margin-top: 5vw;
+    }
+}
+
+.sectionCategories nav {
+    height: 100%;
+}
+
+.sectionCategories nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+    .sectionCategories nav ul div {
+        background: red;
+        width: 25%;
+        padding: 3vh 3vw;
+    }
+}
+
+
+.sectionCategories nav ul div {
+    background: #2E2E2E;
+    width: 20vw;
+    padding: 1.5vh 3vh;
+    border-radius: 0.6vw;
+}
+
+

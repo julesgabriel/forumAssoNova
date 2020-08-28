@@ -16,13 +16,8 @@
       "type": "richtext"
     },
     "associations": {
-<<<<<<< HEAD
-      "via": "category",
-      "collection": "association"
-=======
       "collection": "association",
       "via": "category"
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     },
     "url": {
       "type": "string"

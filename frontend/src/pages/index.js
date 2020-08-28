@@ -10,16 +10,14 @@ import {graphql, useStaticQuery} from "gatsby";
 import Cta from '../components/cta';
 
 
-
-const IndexPage = () => (
+const IndexPage = ({data}) => (
 
     <Layout>
         <SEO title="Accueil"/>
         <section className="titleSection">
-            <h1>Les associations étudiantes du <div className="positionText">
-                <span>Pôle Léonard De Vinci</span>
-            </div>
-            </h1>
+            <h1>Les associations étudiantes <div className="translate"><span className="duSpan">du </span><span>Pôle Léonard De Vinci</span>
+            </div></h1>
+
         </section>
         <section className="keyNumbersSection">
             <ol>
@@ -82,14 +80,7 @@ const IndexPage = () => (
                 Des membres des associations sont là pour répondre à vos questions <span>toute la journée</span>!
             </p>
             <Cta link="https://discord.gg/X77ztWs" className="buttonDiscord" content="discord.com/X77ztWs"/>
-            <p>
-                Et donc pour faire tourner toutes ces assos, on a besoin de TOI ! Rejoins-nous dans cette aventure de
-                malade, tu vas apprendre à gérer une équipe, démarcher des entreprises, organiser des événements, et
-                évidemment découvrir des personnes incroyables qui vont devenir ta famille. <br/><br/>
 
-                On espère que les assos n’ont plus de secrets pour toi, et que t’es motivé.e pour faire vibrer le pôle à
-                nos côtés !
-            </p>
         </section>
     </Layout>
 )
@@ -110,5 +101,4 @@ query homeData {
 export default IndexPage
 
 
-export default IndexPage
 

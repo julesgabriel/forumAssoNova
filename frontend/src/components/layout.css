@@ -3,27 +3,15 @@
     padding: 0;
 }
 
-*::selection {
-    color: #e74111;
-}
-
-<<<<<<< HEAD
-* span::selection, * h2::selection{
-=======
-* span::selection{
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
-    color: #EDEDED;
-}
-
 main {
     background: #1A1A1A;
 }
 
 header {
     display: flex;
+    max-height: 9vh;
     background: #2E2E2E;
     justify-content: space-between;
-    max-height: 7vh;
     box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
 }
 
@@ -113,9 +101,9 @@ header {
 }
 
 .contentBurger div {
-    width: 1.8vw;
+    width: 50%;
     margin: 0 auto;
-    height: 0.2vw;
+    height: 2px;
     background: #e74111;
 }
 
@@ -164,14 +152,12 @@ header {
     background: #2E2E2E;
     padding: 5px 15px 0 15px;
 }
-
 .containerResponsiveMenu ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 15vh;
 }
-
 .containerResponsiveMenu li {
     list-style: none;
     text-align: left;
@@ -186,7 +172,7 @@ header {
     left: 0;
     min-width: 100%;
     position: fixed;
-
+    transform: translate3d(200%, 0, 0);
 }
 
 .out {
@@ -243,13 +229,19 @@ header {
 .containerResponsiveMenu nav ul li:hover {
     -webkit-text-fill-color: #e74111;
     -webkit-text-stroke-color: #e74111;
+    filter: blur(0) !important;
     transition: 1s;
 }
 
-<<<<<<< HEAD
-=======
+.containerResponsiveMenu nav ul li {
+    filter: blur(1px);
+}
 
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
+.containerLogoPulv a{
+    text-align: center;
+    width: 100%;
+}
+
 a {
     width: fit-content;
     margin: 0 auto;
@@ -257,13 +249,19 @@ a {
 
 .cross {
     position: absolute;
-    font-size: 8vw;
-    top: 3vh;
-    z-index: 7000;
-    right: 3vw;
+    right: 2vw;
+    top:1vh;
+    font-size: 4vw;
+    text-align: right;
     color: #EDEDED;
     transition: color 0.2s;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .cross{
+        font-size: 6vw;
+    }
 }
 
 .cross:hover {
@@ -271,15 +269,15 @@ a {
     transition: 0.2s;
 }
 
+html, body{
+    height: 100%;
+}
+
 footer {
     width: 100%;
     height: 10vh;
     background: #2E2E2E;
     display: flex;
-<<<<<<< HEAD
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.16);
-=======
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     justify-content: space-around;
 }
 
@@ -307,39 +305,7 @@ footer li {
     text-align: center;
 }
 
-@media (max-width: 1024px) {
-    header {
-        padding-bottom: 2vh;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 425px) {
-    .cross {
-        top: 1vh;
-        right: -10vh;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    header {
-        padding-bottom: 3vh;
-    }
-}
-
-@media (min-width: 421px) and (max-width: 768px) {
-    .cross {
-        top: 1vh;
-        right: -14vh;
-    }
-}
-
-
 @media (max-width: 768px) {
-    header {
-        padding-bottom: 1vh;
-    }
-
-
     .forumAsso, .categoriesSpan, .containerDiscord {
         display: none;
     }
@@ -358,6 +324,7 @@ footer li {
         width: 100%;
     }
 
+
     .containerMenu div {
         width: 75%;
     }
@@ -375,31 +342,37 @@ footer li {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .containerDiscord {
+        width: 25%;
+    }
+}
+
+@media (max-width: 425px) {
+    .containerCgu{
+        width: 34%;
+    }
+
+    .containerCgu li{
+        font-size: 2.1vw !important;
+    }
+}
+
 /*
 Global Font Color etc...
 */
 
-h1, h2, h3, p, span, .navSpan, li, a, strong {
+h1, h2, h3, p, span, .navSpan, li, a {
     font-family: 'Montserrat', sans-serif;
 }
 
-strong {
-    font-size: 1vw;
-}
-
-.navSpan, li, a, span, h1, strong {
+.navSpan, li, a {
     font-weight: bold;
-    font-size: 0.9vw;
 }
 
-<<<<<<< HEAD
-h1, h3, p, strong {
-    color: #EDEDED;
-    font-size: 1vw;
-=======
 h1, h2, h3, p, strong {
     color: #EDEDED;
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
+    font-size: 1vw;
 }
 
 a:visited {
@@ -410,20 +383,17 @@ a:not(:visited) {
     color: #2E2E2E;
 }
 
-<<<<<<< HEAD
-span, h2{
+span {
+    font-size: 0.9vw;
     color: #e74111;
 }
 
-span{
+.containerCgu li {
     font-size: 1vw;
 }
 
-h2{
-    font-size: 1.5vw;
+@media (max-width: 1024px) {
+    .containerCgu li {
+        font-size: 1.5vw;
+    }
 }
-=======
-span {
-    color: #e74111;
-}
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5

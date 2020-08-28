@@ -1,25 +1,35 @@
-.titleSection {
-    margin: 0 auto;
+.titleSection{
+    width: 70%;
+    margin: 0 auto 1vw auto;
+}
+
+.titleSection h1{
+    width: 40%;
+    font-size: 4vw;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+
+.duSpan{
+    color: #EDEDED;
+}
+
+.titleSection span{
+    font-size: 2vw;
 }
 
 
 .keyNumbersSection, .titleSection {
     width: 70%;
-<<<<<<< HEAD
 }
 
-.titleSection {
-    margin: 0 auto;
-}
+
 
 .keyNumbersSection {
     margin: 0 auto 3vw auto;
 }
-=======
-    margin: 0 auto;
-}
 
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 
 .keyNumbersSection ol {
     width: 85%;
@@ -38,76 +48,45 @@
     flex-direction: column;
 }
 
-.titleSection h1 {
-    width: 50%;
-    font-size: 5vw;
-    max-height: 40vh;
-    margin: 1vw 0;
-}
 
-@media (max-width: 1440px) and (min-width: 769px) {
-    .titleSection h1 {
-        margin: -2vw 0;
-    }
-}
+
 
 @media (min-width: 319px) and (max-width: 376px) {
     .keyNumbersSection {
         margin-top: 3vw;
     }
 
-    .titleSection h1 {
-        padding: 3vw 0;
-    }
-<<<<<<< HEAD
-=======
 
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 }
 
-.titleSection strong {
-    font-size: 2vw;
-}
 
-.titleSection span {
-    font-size: 2vw;
-}
 
 .boldText {
     font-weight: bold;
     font-size: 0.8vw;
 }
 
-<<<<<<< HEAD
 .sectionPresentation span {
     font-size: 0.9vw;
 }
 
-=======
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
+
 @media (max-width: 768px) {
     .boldText {
         font-size: 1.5vw;
     }
 
-    .titleSection h1 {
-        margin: -1vh 0;
-    }
+
 
     .sectionPresentation {
         margin: 1.5vh auto 2.5vh auto !important;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
 }
 
 .positionText {
-    position: relative;
-    bottom: 3vw;
+    padding-bottom: 1vw;
     border-bottom: 1px solid #2E2E2E;
-    padding-bottom: 10px;
     z-index: 0;
 }
 
@@ -115,7 +94,7 @@
     width: 70%;
     margin: 30px auto 45px auto;
 }
-<<<<<<< HEAD
+
 
 .videoSection {
     display: flex;
@@ -127,7 +106,6 @@
     width: 60vw;
     height: 35vw;
 }
-
 
 .discordSectionHome {
     display: flex;
@@ -152,11 +130,12 @@
 }
 
 .bounce {
-    animation: test 6s ease-in-out infinite;
+    color: #e74111;
+    animation: bounce 6s ease-in-out infinite;
     transition: all 0.3s;
 }
 
-@keyframes test {
+@keyframes bounce {
     0% {
         position: relative;
         bottom: 0;
@@ -187,5 +166,4 @@
         bottom: 0;
     }
 }
-=======
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
+

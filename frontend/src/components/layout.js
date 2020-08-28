@@ -40,27 +40,12 @@ query navBarData {
   }
 }
 `)
-<<<<<<< HEAD
-    
-=======
-
-
-
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
-    /**
-     *  const indexArray = [];
-     * for (let i = 0; i < data.allStrapiCommons.edges.length; i++) {
-        let index = data.allStrapiCommons.edges.findIndex(document => document.node.title === data.allStrapiCommons.edges[i].node.title);
-        indexArray.push(index);
-    } */
-
 
     const [state, setState] = useState({
         initialClass: "containerResponsiveMenu"
     })
 
     const handleMenu = () => {
-
         if (state.initialClass === "containerResponsiveMenu") {
             setState({
                 initialClass: "containerResponsiveMenu block"
@@ -92,8 +77,11 @@ query navBarData {
                     </div>
                 </div>
                 <div className="containerLogoPulv">
-                    <img src={data.allStrapiCommons.edges[1].node.logo.childImageSharp.fixed.src}
-                         alt={data.allStrapiCommons.edges[1].node.title}/>
+                    <Link to="/">
+                        <img src={data.allStrapiCommons.edges[1].node.logo.childImageSharp.fixed.src}
+                             alt={data.allStrapiCommons.edges[1].node.title}/>
+                    </Link>
+
                 </div>
                 <div className="containerMenu">
                     <div className="divMenu">
@@ -112,7 +100,9 @@ query navBarData {
                             </nav>
                         </div>
                         <div className="categoriesSpan">
-                            <span className="navSpan">Catégories d'associations</span>
+                            <Link to="/categories">
+                                <span className="navSpan">Catégories d'associations</span>
+                            </Link>
                         </div>
                         <div className="containerBurger">
                             <div className="contentBurger" onClick={handleMenu}>
@@ -124,8 +114,9 @@ query navBarData {
                     </div>
                     <div className="containerDiscord">
                         <div className="containerLogoDiscord">
-                            <img src={data.allStrapiCommons.edges[2].node.logo.childImageSharp.fixed.src}
-                                 alt={data.allStrapiCommons.edges[2].node.title}/>
+                            <Link to="https://discord.gg/X77ztWs"><img
+                                src={data.allStrapiCommons.edges[2].node.logo.childImageSharp.fixed.src}
+                                alt={data.allStrapiCommons.edges[2].node.title}/></Link>
                         </div>
                     </div>
                 </div>

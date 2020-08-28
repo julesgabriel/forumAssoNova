@@ -16,13 +16,8 @@
       "type": "richtext"
     },
     "category": {
-<<<<<<< HEAD
-      "model": "categories",
-      "via": "associations"
-=======
       "via": "associations",
       "model": "categories"
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     },
     "images": {
       "collection": "file",
@@ -38,29 +33,27 @@
     "urlForm": {
       "type": "string"
     },
-<<<<<<< HEAD
     "reseaux_sociaux": {
       "collection": "reseaux-sociaux",
       "via": "association"
     },
     "urlVideo": {
-      "type": "string"
-=======
-    "video": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
-    "reseaux_sociaux": {
-      "via": "association",
-      "collection": "reseaux-sociaux"
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
+      "type": "string",
+      "video": {
+        "model": "file",
+        "via": "related",
+        "allowedTypes": [
+          "images",
+          "files",
+          "videos"
+        ],
+        "plugin": "upload",
+        "required": false
+      },
+      "reseaux_sociaux": {
+        "via": "association",
+        "collection": "reseaux-sociaux"
+      }
     }
   }
 }

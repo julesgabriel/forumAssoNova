@@ -22,12 +22,9 @@
     },
     "title": {
       "type": "string"
-<<<<<<< HEAD
     },
     "urlVideo": {
       "type": "string"
-=======
->>>>>>> 57af438063de5fe91ec1d2923a1f90269f541db5
     }
   }
 }
