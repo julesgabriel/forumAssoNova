@@ -8,7 +8,7 @@
 import React, {useState, useEffect} from "react";
 import styled from 'styled-components';
 import Link from 'gatsby-link';
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import "./layout.css"
 
 const Button = styled.button`
@@ -18,10 +18,22 @@ const Button = styled.button`
     border-radius: 90px;
     font-size: 1vw;
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 0.5vw 1vw;
     margin: 0 auto;
     width:100%;
     cursor:pointer;
+`
+
+const StyledContent = styled.div`
+    display: flex;
+    width: 100%;
+    align-items:center;
+`
+
+const StyledText = styled.p`
+    width: 90%; 
+    font-size:0.8vw;
+    margin: 0 0 0 0.8vw;
 `
 
 const Cta = (props) => {

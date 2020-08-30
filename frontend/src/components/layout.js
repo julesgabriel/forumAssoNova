@@ -81,7 +81,6 @@ query navBarData {
                         <img src={data.allStrapiCommons.edges[1].node.logo.childImageSharp.fixed.src}
                              alt={data.allStrapiCommons.edges[1].node.title}/>
                     </Link>
-
                 </div>
                 <div className="containerMenu">
                     <div className="divMenu">

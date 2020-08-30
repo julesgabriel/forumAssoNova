@@ -17,9 +17,7 @@ const CategoriesPage = ({data}) => (
                     {data.allStrapiCategories.edges.map(document => (
                         <div>
                             <Link to={`/${document.node.url}`}>
-
                                 <li><span>{document.node.title}</span></li>
-
                             </Link>
                         </div>
                     ))}

@@ -55,7 +55,7 @@ header {
 }
 
 .containerLogoPulv img {
-    width: 20%;
+    width: 15%;
     margin: auto;
 }
 
@@ -396,4 +396,18 @@ span {
     .containerCgu li {
         font-size: 1.5vw;
     }
+}
+
+
+.none{
+    display: none;
+}
+
+.faIcon{
+    color: #e74111;
+}
+
+.arrow {
+    stroke: rgb(0, 0, 0);
+    stroke-width: 1px;
 }
