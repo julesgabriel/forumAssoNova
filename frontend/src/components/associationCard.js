@@ -19,12 +19,15 @@ import {
     faPinterest
 } from '@fortawesome/free-brands-svg-icons'
 
+import Link from 'gatsby-link';
+
 import "./layout.css"
 import Cta from "./cta";
 
+
 const Section = styled.section`
     width:70%;
-    margin: 2vw auto;
+    margin: 5vw auto;
     height: 50vh;
 `
 
@@ -32,7 +35,6 @@ const FirstColumn = styled.div`
     width:55%;
     height: 80%;
 `
-
 
 const Title = styled.h2`
     width:66%;
@@ -74,7 +76,6 @@ const Button = styled.button`
 
 const FlexDiv = styled.div`
     display:flex;
-    height:100%;
 `
 
 const StyledDiv = styled.div`
@@ -101,6 +102,13 @@ const StyledGallery = styled.div`
 
 const StyledDivImage = styled.div`
    background: blue;
+   width:30%;
+   object-fit:content;
+`
+
+const StyledImage = styled.img`
+   width:100%;
+   height:100%;
 `
 
 const AssociationCard = (props) => {
@@ -108,38 +116,29 @@ const AssociationCard = (props) => {
         <Section>
             <FlexDiv>
                 <FirstColumn>
-                    <Title>Nom Association</Title>
-                    <Paragraph>Donec et rhoncus orci. Donec viverra accumsan leo vitae mattis. Pellentesque vel diam
-                        sodales, lobortis tellus eu, hendrerit nunc. Fusce quis sapien viverra, varius orci ut, auctor
-                        lacus. Nunc eu scelerisque turpis. Proin dignissim cursus pellentesque. Maecenas posuere nisi
-                        metus,
-                        in bibendum lorem suscipit nec. Cras nulla ligula, sodales eu blandit eget, placerat eget nunc.
-                        Nam
-                        sit amet ullamcorper est. Nullam elementum magna non sodales interdum. Aenean laoreet purus
-                        sapien,
-                        a dignissim mauris sollicitudin in. Integer eget sollicitudin orci. Etiam eros massa, mattis nec
-                        purus at, consectetur fringilla sapien. Donec vel molestie metus. Mauris tincidunt, massa non
-                        molestie malesuada, leo mauris ultrices lacus, at pulvinar dui orci sit amet tellus. In hac
-                        habitasse platea dictumst.</Paragraph>
+                    <Title>{props.title}</Title>
+                    <Paragraph>{props.content}</Paragraph>
                 </FirstColumn>
                 <FirstColumn>
                     <DivButtons>
                         <Button><span><FontAwesomeIcon icon={faPlay}/></span>Vidéo de présentation</Button>
                         <StyledDiv>
-                            <FontAwesomeIcon icon={faInstagram}/>
-                            <FontAwesomeIcon icon={faInstagram}/>
-                            <FontAwesomeIcon icon={faInstagram}/>
-                            <FontAwesomeIcon icon={faInstagram}/>
-                            <FontAwesomeIcon icon={faInstagram}/>
+                            <p>{props.test}</p>
                         </StyledDiv>
-                        <Button>Postuler</Button>
+                        <Link className="url" to={props.url}><Button>Postuler</Button></Link>
                     </DivButtons>
                 </FirstColumn>
             </FlexDiv>
             <StyledGallery>
-                <StyledDivImage>ok</StyledDivImage>
-                <StyledDivImage>pk</StyledDivImage>
-                <StyledDivImage>ok</StyledDivImage>
+                <StyledDivImage>
+                    <StyledImage src={props.first} alt={"image une" + document.title}/>
+                </StyledDivImage>
+                <StyledDivImage>
+                    <StyledImage src={props.second} alt={"image deux" + document.title}/>
+                </StyledDivImage>
+                <StyledDivImage>
+                    <StyledImage src={props.third} alt={"image trois" + document.title}/>
+                </StyledDivImage>
             </StyledGallery>
         </Section>
     )

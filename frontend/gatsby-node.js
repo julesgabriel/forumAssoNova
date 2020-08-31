@@ -25,6 +25,7 @@ allStrapiCategories {
       node {
         title
         url
+        id
       }
     }
   }

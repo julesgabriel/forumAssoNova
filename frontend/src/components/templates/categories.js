@@ -1,15 +1,58 @@
 import React from "react"
-import { Link } from "gatsby"
+import {graphql, Link} from "gatsby"
 
 import Layout from "../layout"
 
-import SEO from "../seo"
 import AssociationCard from "../associationCard";
 
-const IndexPage = () => (
+let element;
+
+const IndexPage = ({data}) => (
     <Layout>
-        <AssociationCard content=""/>
+        {data.strapiCategories.associations.map((document, i) => (
+            <AssociationCard title={document.title} content={document.description} url={document.urlForm}
+                             first={document.firstImage.childImageSharp.fixed.src}
+                             second={document.secondImage.childImageSharp.fixed.src}
+                             third={document.thirdImage.childImageSharp.fixed.src}/>
+        ))}
     </Layout>
 )
 
+export const pageQuery = graphql`
+query UserTemplate($id: String!) {
+  strapiCategories(id: {eq: $id}) {
+    title
+    id
+    associations {
+      title
+      description
+      urlForm
+      firstImage {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
+      secondImage {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
+      thirdImage {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 export default IndexPage
+
+

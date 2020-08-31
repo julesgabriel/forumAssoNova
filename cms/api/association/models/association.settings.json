@@ -16,11 +16,11 @@
       "type": "richtext"
     },
     "category": {
-      "via": "associations",
-      "model": "categories"
+      "model": "categories",
+      "via": "associations"
     },
-    "images": {
-      "collection": "file",
+    "firstImage": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -33,27 +33,38 @@
     "urlForm": {
       "type": "string"
     },
-    "reseaux_sociaux": {
-      "collection": "reseaux-sociaux",
-      "via": "association"
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     },
-    "urlVideo": {
-      "type": "string",
-      "video": {
-        "model": "file",
-        "via": "related",
-        "allowedTypes": [
-          "images",
-          "files",
-          "videos"
-        ],
-        "plugin": "upload",
-        "required": false
-      },
-      "reseaux_sociaux": {
-        "via": "association",
-        "collection": "reseaux-sociaux"
-      }
+    "secondImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "thirdImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

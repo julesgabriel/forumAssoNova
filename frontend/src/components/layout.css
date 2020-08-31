@@ -398,6 +398,9 @@ span {
     }
 }
 
+.url{
+    width: 100%;
+}
 
 .none{
     display: none;
