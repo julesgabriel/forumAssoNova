@@ -113,9 +113,9 @@ query navBarData {
                     </div>
                     <div className="containerDiscord">
                         <div className="containerLogoDiscord">
-                            <Link to="https://discord.gg/X77ztWs"><img
+                            <a to="https://discord.gg/X77ztWs"><img
                                 src={data.allStrapiCommons.edges[2].node.logo.childImageSharp.fixed.src}
-                                alt={data.allStrapiCommons.edges[2].node.title}/></Link>
+                                alt={data.allStrapiCommons.edges[2].node.title}/></a>
                         </div>
                     </div>
                 </div>

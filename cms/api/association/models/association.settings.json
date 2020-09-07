@@ -33,17 +33,6 @@
     "urlForm": {
       "type": "string"
     },
-    "video": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "secondImage": {
       "model": "file",
       "via": "related",
@@ -65,6 +54,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "reseau": {
+      "type": "string"
+    },
+    "video": {
+      "type": "string"
     }
   }
 }

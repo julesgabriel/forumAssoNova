@@ -30,19 +30,15 @@ const StyledContent = styled.div`
     align-items:center;
 `
 
-const StyledText = styled.p`
-    width: 90%; 
-    font-size:0.8vw;
-    margin: 0 0 0 0.8vw;
-`
+
 
 const Cta = (props) => {
     return (
-        <Link to={props.link}>
+        <a href={props.link}>
             <Button className={props.className}>
                 {props.content}
             </Button>
-        </Link>
+        </a>
     )
 }
 
