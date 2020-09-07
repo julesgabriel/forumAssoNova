@@ -1,5 +1,5 @@
-import React, {useState} from "react"
-import {graphql, Link} from "gatsby"
+import React from "react"
+import {graphql} from "gatsby"
 
 import Layout from "../layout"
 
@@ -7,16 +7,7 @@ import Layout from "../layout"
 import styled from "styled-components";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons';
-import {
-    faInstagram,
-    faFacebook,
-    faTwitter,
-    faLinkedin,
-    faYoutube,
-    faTwitch,
-    faPinterest
-} from '@fortawesome/free-brands-svg-icons'
-import {element} from "prop-types";
+import Link from 'gatsby-link';
 
 
 const Section = styled.section`
@@ -105,9 +96,35 @@ const PopUp = styled.div`
    display:flex;
    align-items: center;
    display: none;
+`
+const NavBar = styled.nav`
+   position: fixed;
+   right: 0;
+   top:1vh;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+   object-fit: cover;
+   height: 100vh;
+   width: 6vw;
   
- `
+`
 
+const ContainerLogo = styled.nav`
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+   background: #212121;
+   min-height: 50vh;
+   max-height:60vh;
+   overflow-y: scroll;
+   box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
+`
+
+const ImgNav = styled.img`
+    height: 8vh;
+    width: 5v;
+`
 
 let clicked = 0;
 
@@ -133,15 +150,20 @@ const close = () => {
     clicked = 0;
 }
 
+
 const AssociationPage = ({data}) => (
-
-
     <Layout>
-        
-
+        <NavBar className="asideNavBar">
+            <ContainerLogo id="containerLogo">
+                {data.strapiCategories.associations.map((element) => (
+                    <Link to={"#" + element.title}>
+                        <ImgNav className="imgGenerated" src={element.logo.childImageSharp.fixed.src}/></Link>
+                ))}
+            </ContainerLogo>
+        </NavBar>
         {data.strapiCategories.associations.map((document, index) => (
             <Section>
-                <FlexDiv>
+                <FlexDiv id={document.title}>
                     <FirstColumn>
                         <Title>{document.title}</Title>
                         <Paragraph>{document.description}</Paragraph>
@@ -185,11 +207,11 @@ const AssociationPage = ({data}) => (
             </div>
             <iframe
                 id="iframePopUp"
-                src={videoUrl + "?autoplay=1&cc_load_policy=1&vq=hd720"}
+                src={videoUrl}
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                allow="accelerometer; picture-in-picture, autoplay"
+                allow="accelerometer; picture-in-picture"
                 allowFullScreen/>
         </PopUp>
     </Layout>
@@ -227,6 +249,13 @@ query UserTemplate($id: String!) {
       }
       reseau
       video
+      logo {
+        childImageSharp {
+          fixed {
+            src
+          }
+        }
+      }
     }
   }
 }
