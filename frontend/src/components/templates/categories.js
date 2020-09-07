@@ -12,7 +12,23 @@ import Link from 'gatsby-link';
 
 const Section = styled.section`
     width:70%;
+    margin: 2vw auto;
+    border-bottom: 1px solid #2E2E2E;
+    padding-bottom: 1vw;
+`
+
+const TitleSection = styled.section`
+    width:80%;
     margin: 5vw auto;
+    border-bottom: 1px solid #2E2E2E;
+`
+
+const TitlePage = styled.h1`
+    font-size: 3vw;
+    margin-bottom: 3vw;
+    @media (max-width: 768px){
+    font-size: 4vw;
+    }
 `
 
 const FirstColumn = styled.div`
@@ -27,20 +43,27 @@ const Title = styled.h2`
     font-size: 2.5vw
 `
 
-const DivButtons = styled.div`
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   height: 35vh;
-   width: 13vw;
-   text-align:left;
-   margin: 0 auto;
-`
 
 const Paragraph = styled.p`
     width: 100%;
     font-weight: bold;
     font-size: 1vw;
+    @media (max-width: 768px){
+    font-size: 1.3vw;
+    }
+`
+
+const DivButtons = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 20vw;
+   width: 13vw;
+   text-align:left;
+   margin: 0 auto;
+   @media (max-width:1024px){
+   width: 20vw
+   }
 `
 
 const Button = styled.button`
@@ -49,6 +72,7 @@ const Button = styled.button`
     background: #212121;
     color: #ededed;
     border: none;
+    align-items: center;
     border-radius: 90px;
     font-size: 0.8vw;
     font-weight: bold;
@@ -56,6 +80,9 @@ const Button = styled.button`
     margin: 0 auto;
     width:100%;
     cursor:pointer;
+    @media (max-width:1024px){
+  font-size: 1.4vw;
+   }
 `
 
 const FlexDiv = styled.div`
@@ -68,7 +95,7 @@ const StyledGallery = styled.div`
     display:flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 1vw;
+    margin: 1vw 0 2vw 0;
 `
 
 const StyledDivImage = styled.div`
@@ -80,11 +107,6 @@ const StyledDivImage = styled.div`
 const StyledImage = styled.img`
    width:100%;
    height:100%;
-`
-
-const DivTest = styled.div`
-   width:100%;
-   height: 100%
 `
 
 const PopUp = styled.div`
@@ -100,14 +122,20 @@ const PopUp = styled.div`
 const NavBar = styled.nav`
    position: fixed;
    right: 0;
-   top:1vh;
+   top:10vh;
    display:flex;
    flex-direction: column;
    justify-content: space-around;
    object-fit: cover;
-   height: 100vh;
+   height: 80vh;
    width: 6vw;
-  
+   @media (max-width: 768px){
+    height: 60vh;
+   }
+   @media (max-width: 425px){
+   height: 30vh;
+   width: 8vw;
+   }
 `
 
 const ContainerLogo = styled.nav`
@@ -115,19 +143,32 @@ const ContainerLogo = styled.nav`
    flex-direction: column;
    justify-content: space-around;
    background: #212121;
-   min-height: 50vh;
-   max-height:60vh;
+   min-height: 25vw;
+   max-height:40vh;
    overflow-y: scroll;
    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
+   text-align:center;
+   @media (max-width: 425px){
+   min-height: 35vw;
+   }
+`
+
+
+const StyledParagraphTitle = styled.p`
+    margin-bottom: 2vw;
+    font-size: 1vw;
+    font-weight: bold;
+    @media (max-width: 768px){
+    font-size: 1.5vw;
+    }
 `
 
 const ImgNav = styled.img`
-    height: 8vh;
-    width: 5v;
+    height: 80%;
+    width: 80%;
 `
 
 let clicked = 0;
-
 let videoUrl = "https://www.youtube.com/embed/ba9bNPUQ2tg"
 
 const test = (e, data) => {
@@ -150,9 +191,12 @@ const close = () => {
     clicked = 0;
 }
 
-
 const AssociationPage = ({data}) => (
     <Layout>
+        <TitleSection id="titleSection">
+            <TitlePage>{data.strapiCategories.title}</TitlePage>
+            <StyledParagraphTitle>{data.strapiCategories.description}</StyledParagraphTitle>
+        </TitleSection>
         <NavBar className="asideNavBar">
             <ContainerLogo id="containerLogo">
                 {data.strapiCategories.associations.map((element) => (
@@ -162,8 +206,8 @@ const AssociationPage = ({data}) => (
             </ContainerLogo>
         </NavBar>
         {data.strapiCategories.associations.map((document, index) => (
-            <Section>
-                <FlexDiv id={document.title}>
+            <Section className="divAsso">
+                <FlexDiv id={document.title} >
                     <FirstColumn>
                         <Title>{document.title}</Title>
                         <Paragraph>{document.description}</Paragraph>
@@ -203,7 +247,7 @@ const AssociationPage = ({data}) => (
         ))}
         <PopUp id="popUpNone">
             <div className="closePopUp" onClick={close}>
-                <button>Fermer la popUp</button>
+                <button>Fermer la fenêtre</button>
             </div>
             <iframe
                 id="iframePopUp"
@@ -257,6 +301,7 @@ query UserTemplate($id: String!) {
         }
       }
     }
+    description
   }
 }
 `

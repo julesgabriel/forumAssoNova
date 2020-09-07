@@ -9,9 +9,25 @@ import {graphql, useStaticQuery} from "gatsby";
 
 import Cta from '../components/cta';
 
+const firstVideo = "https://www.youtube.com/embed/UJ83fC-2HhM"
+const secondVideo = "https://www.youtube.com/embed/-52MWBzal2c";
+let currentVideo = firstVideo;
+let iframeHome = document.getElementById('iframeHome');
 
-const IndexPage = ({data}) => (
+let day = new Date();
+let hour = day.getHours();
+let minutes = day.getMinutes();
 
+
+setTimeout(function () {
+    if (hour === 22 && iframeHome !== secondVideo) {
+        iframeHome.src = secondVideo
+    } else if (hour === 23 && iframeHome !== firstVideo) {
+        iframeHome.setAttribute("src", firstVideo);
+    }
+}, 1000)
+
+const IndexPage = () => (
     <Layout>
         <SEO title="Accueil"/>
         <section className="titleSection">
@@ -56,9 +72,27 @@ const IndexPage = ({data}) => (
             </p>
         </section>
 
+        <section className="forumDigitale">
+            <h2>Un forum totalement <span>digitale</span></h2>
+            <p className="boldText">
+                Chaque année, le forum associatif a lieu au pôle, en rue basse et 55 associations font leur présentation
+                à plusieurs centaines d’étudiants dans un espace clos de moins de 200 mètres carrés. Dans le contexte
+                actuel, t’imagines bien que ça risque d’être assez compliqué ! <br/><br/>
+
+                Le forum asso ne pourra donc pas avoir lieu directement au sein du pôle... mais j’ai une bonne nouvelle
+                pour toi ! Nous avons pensé à tout ! Et c’est pourquoi nous t’avons concocté un forum 100% digital,
+                interactif et pensé pour toi. L’objectif est de revisiter le concept et t’offrir un forum asso 2.0
+                ! <br/> <br/>
+
+                Grâce à cela, tu vas pouvoir t’intéresser aux différentes assos du pôle, échanger et peut être intégrer
+                l’asso de ton choix 😉.
+            </p>
+        </section>
+
         <section className="videoSection">
             <iframe
-                src={data.allStrapiCommons.edges[3].node.urlVideo + "?autoplay=1&cc_load_policy=1&vq=hd720"}
+                id="iframeHome"
+                src={currentVideo + "?autoplay=1&cc_load_policy=1&vq=hd720"}
                 frameBorder="0"
                 allow="accelerometer; picture-in-picture"
                 allowFullScreen/>
@@ -71,25 +105,8 @@ const IndexPage = ({data}) => (
                 Des membres des associations sont là pour répondre à vos questions <span>toute la journée</span> !
             </p>
             <Cta link="https://discord.gg/X77ztWs" className="buttonDiscord" content="discord.com/X77ztWs"/>
-
         </section>
     </Layout>
 )
 
-
-export const pageQuery = graphql`
-query homeData {
-  allStrapiCommons {
-    edges {
-      node {
-        urlVideo
-      }
-    }
-  }
-}
-`
-
 export default IndexPage
-
-
-

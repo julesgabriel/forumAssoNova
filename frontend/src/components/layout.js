@@ -133,9 +133,6 @@ query navBarData {
                         <Link to="/mentions-legales">
                             <li>Mentions légales</li>
                         </Link>
-                        <Link to="/cgu">
-                            <li>Conditions Générales d'utilisation</li>
-                        </Link>
                     </ul>
 
                 </div>

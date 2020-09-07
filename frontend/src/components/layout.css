@@ -4,8 +4,27 @@
     scroll-behavior: smooth;
 }
 
+span::selection{
+    color: white;
+    background: none;
+}
+
+p::selection, h1::selection, h2::selection, h3::selection{
+    color: #e74111;
+    background: none;
+}
+
 main {
     background: #1A1A1A;
+}
+
+@media (max-width: 425px){
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-around;
+    }
 }
 
 header {
@@ -454,4 +473,8 @@ span {
 #containerLogo::-webkit-scrollbar-thumb{
     border: 1px solid #2E2E2E;
     background: #e74111;
+}
+
+.categoriesDescription{
+
 }

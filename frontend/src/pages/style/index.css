@@ -68,15 +68,25 @@
 
 
 @media (max-width: 768px) {
-    .boldText {
+    .boldText, .boldText span {
         font-size: 1.5vw;
     }
 
+    .discordSectionHome h2, .discordSectionHome h2 span{
+        font-size: 2vw !important;
+    }
+
+    .discordSectionHome p, .discordSectionHome p span{
+        font-size: 1.5vw !important;
+    }
 
     .sectionPresentation {
         margin: 1.5vh auto 2.5vh auto !important;
     }
 
+    .discordSectionHome button{
+        font-size: 1.5vw;
+    }
 }
 
 .positionText {
@@ -111,7 +121,7 @@
     background: #212121;
     box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.16);
     text-align: center;
-    height: 18vh
+    height: fit-content;
 }
 
 .buttonDiscord {
@@ -126,8 +136,16 @@
     font-size: 1vw;
 }
 
+.discordSectionHome p {
+    margin: 2vw 0;
+}
+
 .discordSectionHome span {
     font-weight: bold;
+}
+
+.discordSectionHome button{
+    font-size: 1vw;
 }
 
 .buttonDiscord:hover {
@@ -174,3 +192,15 @@
     }
 }
 
+.forumDigitale h2, .forumDigitale h2 span{
+    width: 50%;
+    font-size: 2vw;
+    padding: 2vw 0;
+    border-top: 1px solid #2E2E2E;
+}
+
+.forumDigitale{
+    width: 70%;
+    margin: 0 auto 2vw auto;
+    font-weight: bold;
+}
