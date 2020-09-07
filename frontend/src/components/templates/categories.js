@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import {graphql, Link} from "gatsby"
 
 import Layout from "../layout"
@@ -96,13 +96,49 @@ const DivTest = styled.div`
    height: 100%
 `
 
+const PopUp = styled.div`
+   width:50%;
+   height: 50%;
+   position: fixed;
+   bottom: 25vh;
+   left: 25vw;
+   display:flex;
+   align-items: center;
+   display: none;
+  
+ `
+
+
+let clicked = 0;
+
+let videoUrl = "https://www.youtube.com/embed/ba9bNPUQ2tg"
+
 const test = (e, data) => {
-    console.log(e.target.id)
-    console.log(data.strapiCategories.associations[e.target.id].video)
+    const popUp = document.getElementById('popUpNone');
+    let id = e.target.id
+    let videoDataClicked = data.strapiCategories.associations[id].video
+    let iframe = document.getElementById("iframePopUp");
+    if (clicked === 0) {
+        popUp.style.display = "block"
+        clicked = 1;
+        iframe.src = videoDataClicked;
+    } else {
+        popUp.style.display = "none";
+        clicked = 0
+    }
+}
+
+const close = () => {
+    document.getElementById('popUpNone').style.display = "none";
+    clicked = 0;
 }
 
 const AssociationPage = ({data}) => (
+
+
     <Layout>
+        
+
         {data.strapiCategories.associations.map((document, index) => (
             <Section>
                 <FlexDiv>
@@ -143,6 +179,19 @@ const AssociationPage = ({data}) => (
                 </StyledGallery>
             </Section>
         ))}
+        <PopUp id="popUpNone">
+            <div className="closePopUp" onClick={close}>
+                <button>Fermer la popUp</button>
+            </div>
+            <iframe
+                id="iframePopUp"
+                src={videoUrl + "?autoplay=1&cc_load_policy=1&vq=hd720"}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; picture-in-picture, autoplay"
+                allowFullScreen/>
+        </PopUp>
     </Layout>
 )
 

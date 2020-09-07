@@ -367,7 +367,7 @@ h1, h2, h3, p, span, .navSpan, li, a {
     font-family: 'Montserrat', sans-serif;
 }
 
-.navSpan, li, a {
+.navSpan, li, a, button {
     font-weight: bold;
 }
 
@@ -408,7 +408,7 @@ span {
     color: #e74111;
 }
 
-.one{
+.one {
     width: 50% !important;
 }
 
@@ -425,4 +425,22 @@ span {
     stroke-width: 1px;
 }
 
+.iframePopUp {
+    margin: 0 auto;
+}
 
+.closePopUp button {
+    cursor: pointer;
+    width: 20%;
+    border: none;
+    padding: 0.3vw 0.2vw;
+    background: #2E2E2E;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    filter: brightness(60%);
+}
+
+.closePopUp button:hover {
+    filter: brightness(100%);
+}
