@@ -5,21 +5,19 @@ import Layout from "../components/layout"
 import './style/index.css';
 import SEO from "../components/seo"
 
-import {graphql, useStaticQuery} from "gatsby";
-
 import Cta from '../components/cta';
 
 const firstVideo = "https://www.youtube.com/embed/UJ83fC-2HhM"
 const secondVideo = "https://www.youtube.com/embed/-52MWBzal2c";
 let currentVideo = firstVideo;
-let iframeHome = document.getElementById('iframeHome');
+
 
 let day = new Date();
 let hour = day.getHours();
 let minutes = day.getMinutes();
 
-
 setTimeout(function () {
+    let iframeHome = document.getElementById('iframeHome');
     if (hour === 22 && iframeHome !== secondVideo) {
         iframeHome.src = secondVideo
     } else if (hour === 23 && iframeHome !== firstVideo) {

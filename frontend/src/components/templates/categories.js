@@ -39,7 +39,7 @@ const FirstColumn = styled.div`
 const Title = styled.h2`
     width:66%;
     height: fit-content;
-    margin: 0 0 3vw 0;
+    margin: 0 0 2vw 1vw;
     font-size: 2.5vw
 `
 
@@ -119,6 +119,20 @@ const PopUp = styled.div`
    align-items: center;
    display: none;
 `
+
+console.log(window.location.href.search('sport'))
+
+
+let navDisplay = () => {
+    if (window.location.href.search('sport') !== -1) {
+        return "none";
+    } else {
+        return "block"
+    }
+}
+
+navDisplay()
+
 const NavBar = styled.nav`
    position: fixed;
    right: 0;
@@ -127,7 +141,7 @@ const NavBar = styled.nav`
    flex-direction: column;
    justify-content: space-around;
    object-fit: cover;
-   height: 80vh;
+   max-height: 90vh;
    width: 6vw;
    @media (max-width: 768px){
     height: 60vh;
@@ -136,23 +150,50 @@ const NavBar = styled.nav`
    height: 30vh;
    width: 8vw;
    }
+   display none
 `
+
+let containerSize = () => {
+    if (window.location.href.search('bde') || window.location.href.search('multimedia') !== -1) {
+        return "25vw"
+    }
+}
 
 const ContainerLogo = styled.nav`
    display:flex;
    flex-direction: column;
    justify-content: space-around;
    background: #212121;
-   min-height: 25vw;
-   max-height:40vh;
    overflow-y: scroll;
+   height: 100%;
    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.27);
    text-align:center;
+   width:100%;
+   object-fit: cover;
    @media (max-width: 425px){
    min-height: 35vw;
    }
+ 
 `
 
+console.log(window.location.href.search('art'));
+
+let imageSize = () => {
+    if (window.location.href.search('bde') !== -1) {
+        return "80%"
+    }
+
+    if (window.location.href.search('sport') || window.location.href.search('art') !== -1) {
+        return "38%"
+    }
+
+};
+
+
+const ImgNav = styled.img`
+    width: ${imageSize};
+    border-radius: 90%
+`
 
 const StyledParagraphTitle = styled.p`
     margin-bottom: 2vw;
@@ -163,10 +204,6 @@ const StyledParagraphTitle = styled.p`
     }
 `
 
-const ImgNav = styled.img`
-    height: 80%;
-    width: 80%;
-`
 
 let clicked = 0;
 let videoUrl = "https://www.youtube.com/embed/ba9bNPUQ2tg"
@@ -207,9 +244,12 @@ const AssociationPage = ({data}) => (
         </NavBar>
         {data.strapiCategories.associations.map((document, index) => (
             <Section className="divAsso">
-                <FlexDiv id={document.title} >
+                <FlexDiv id={document.title}>
                     <FirstColumn>
-                        <Title>{document.title}</Title>
+                        <div className="flex">
+                            <img src={document.logo.childImageSharp.fixed.src} alt=""/>
+                            <Title>{document.title}</Title>
+                        </div>
                         <Paragraph>{document.description}</Paragraph>
                     </FirstColumn>
                     <FirstColumn>
@@ -222,7 +262,10 @@ const AssociationPage = ({data}) => (
                             </a>
                             <a href={document.urlForm}
                                className={document.title === "BDE Nova" ? "url disabled" : "url"} target="_blank">
-                                <Button>{document.title === "BDE Nova" ? "Prochainement disponible" : "Postuler"}</Button>
+                                <Button>
+                                    {document.title === "BDE Nova" || document.title === "DeVinci Junior" ||
+                                    document.title === "AMMA" || document.title === "Etoile de Vinci" ? "Disponible ultèrieurement" : "Postuler"}
+                                </Button>
                             </a>
                         </DivButtons>
                     </FirstColumn>
