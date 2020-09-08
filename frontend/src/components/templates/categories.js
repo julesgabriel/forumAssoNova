@@ -120,7 +120,6 @@ const PopUp = styled.div`
    display: none;
 `
 
-console.log(window.location.href.search('sport'))
 
 
 let navDisplay = () => {
@@ -131,7 +130,6 @@ let navDisplay = () => {
     }
 }
 
-navDisplay()
 
 const NavBar = styled.nav`
    position: fixed;
