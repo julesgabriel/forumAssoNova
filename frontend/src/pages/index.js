@@ -36,7 +36,7 @@ const IndexPage = () => (
         <section className="keyNumbersSection">
             <ol>
                 <li><CountUp delay={0.1} end={7500} duration={1}/><strong>étudiants</strong></li>
-                <li><CountUp delay={0.1} end={55} duration={1}/><strong>Associations</strong></li>
+                <li><CountUp delay={0.1} end={54} duration={1}/><strong>Associations</strong></li>
                 <li><CountUp delay={0.1} end={5800} duration={1}/><strong>m² de locaux</strong></li>
                 <li><CountUp delay={0.1} end={300} duration={1}/><strong>Entreprises partenaires</strong></li>
             </ol>
@@ -48,10 +48,9 @@ const IndexPage = () => (
                 rencontrer des gens
                 quand même,
                 <span> la transversalité</span> entre les écoles est hyper présente : semaines transverses, sport
-                obligatoire, et on y
-                vient, le meilleur... <span>les assos!</span> <br/>
+                obligatoire, et on y vient, le meilleur... <span>les assos!</span> <br/>
                 Les assos, c’est clairement le moyen le plus simple et sympa de te faire des potes. Actuellement, il y a
-                pas moins de <span>55 assos</span> ! Il y
+                pas moins de <span>54 assos</span> ! Il y
                 a <span>du sport</span>, <span>du gaming</span>, <span>de l’événementiel</span>, <span>du théâtre</span>, <span>de la cuisine</span>, <span>de
                 l’aquaponey</span>. Bref t’as vraiment moyen de trouver ton bonheur! <br/><br/>
 
@@ -67,6 +66,12 @@ const IndexPage = () => (
                 On espère que les assos n’ont plus de secrets pour toi, et que t’es <span>motivé.e</span> pour faire
                 vibrer le pôle à
                 nos côtés !
+                <br/><br/>
+                <span>Dear exchange students</span>, associations <span>being</span> international, understand that you
+                are also invited to join
+                this associative forum! We count on your presence and <span>investment</span> in our associations and we
+                will be
+                there all day long to meet your needs! See you soon 😉
             </p>
         </section>
 

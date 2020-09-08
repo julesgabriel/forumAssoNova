@@ -35,6 +35,7 @@ query navBarData {
     edges {
       node {
         title
+        url
       }
     }
   }
