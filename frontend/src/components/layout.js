@@ -27,6 +27,7 @@ query navBarData {
           }
         }
         title
+        url
       }
     }
   }
@@ -34,7 +35,6 @@ query navBarData {
     edges {
       node {
         title
-        url
       }
     }
   }
@@ -124,9 +124,26 @@ query navBarData {
             <main>{children}</main>
             <footer>
                 <div className="containerSchoolLogo">
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
+                    <div className="logoBox">
+                        <div className="schoolLogos">
+                            <a href={data.allStrapiCommons.edges[4].node.url} target="_blank">
+                                <img src={data.allStrapiCommons.edges[4].node.logo.childImageSharp.fixed.src}
+                                     alt={data.allStrapiCommons.edges[4].title}/>
+                            </a>
+                        </div>
+                        <div className="schoolLogos">
+                            <a href={data.allStrapiCommons.edges[5].node.url} target="_blank">
+                                <img src={data.allStrapiCommons.edges[5].node.logo.childImageSharp.fixed.src}
+                                     alt={data.allStrapiCommons.edges[5].title}/>
+                            </a>
+                        </div>
+                        <div className="schoolLogos">
+                            <a href={data.allStrapiCommons.edges[6].node.url} target="_blank">
+                                <img src={data.allStrapiCommons.edges[6].node.logo.childImageSharp.fixed.src}
+                                     alt={data.allStrapiCommons.edges[6].title}/>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div className="containerCgu">
                     <ul>
@@ -134,10 +151,20 @@ query navBarData {
                             <li>Mentions légales</li>
                         </Link>
                     </ul>
-
                 </div>
                 <div className="containerPulvSocialNetworks">
-
+                    <div className="socialLogos">
+                        <a href={data.allStrapiCommons.edges[3].node.url} target="_blank">
+                            <img src={data.allStrapiCommons.edges[3].node.logo.childImageSharp.fixed.src}
+                                 alt={data.allStrapiCommons.edges[3].title}/>
+                        </a>
+                    </div>
+                    <div className="socialLogos">
+                        <a href={data.allStrapiCommons.edges[7].node.url} target="_blank">
+                            <img src={data.allStrapiCommons.edges[7].node.logo.childImageSharp.fixed.src}
+                                 alt={data.allStrapiCommons.edges[7].title}/>
+                        </a>
+                    </div>
                 </div>
             </footer>
         </main>

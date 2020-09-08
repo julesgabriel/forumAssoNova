@@ -121,7 +121,6 @@ const PopUp = styled.div`
 `
 
 
-
 let navDisplay = () => {
     if (window.location.href.search('sport') !== -1) {
         return "none";
@@ -171,22 +170,16 @@ const ContainerLogo = styled.nav`
    @media (max-width: 425px){
    min-height: 35vw;
    }
- 
 `
-
-
 
 let imageSize = () => {
     if (window.location.href.search('bde') !== -1) {
         return "80%"
     }
-
     if (window.location.href.search('sport') || window.location.href.search('art') !== -1) {
         return "38%"
     }
-
 };
-
 
 const ImgNav = styled.img`
     width: ${imageSize};
@@ -201,7 +194,6 @@ const StyledParagraphTitle = styled.p`
     font-size: 1.5vw;
     }
 `
-
 
 let clicked = 0;
 let videoUrl = "https://www.youtube.com/embed/ba9bNPUQ2tg"

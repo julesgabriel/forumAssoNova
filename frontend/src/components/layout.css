@@ -4,12 +4,12 @@
     scroll-behavior: smooth;
 }
 
-span::selection{
+span::selection {
     color: white;
     background: none;
 }
 
-p::selection, h1::selection, h2::selection, h3::selection{
+p::selection, h1::selection, h2::selection, h3::selection {
     color: #e74111;
     background: none;
 }
@@ -18,8 +18,8 @@ main {
     background: #1A1A1A;
 }
 
-@media (max-width: 425px){
-    main{
+@media (max-width: 425px) {
+    main {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -27,12 +27,12 @@ main {
     }
 }
 
-.flex{
+.flex {
     display: flex;
     object-fit: cover;
 }
 
-.flex img{
+.flex img {
     border-radius: 90%;
     width: 10%;
     height: 10%;
@@ -476,16 +476,55 @@ span {
     filter: brightness(100%);
 }
 
-#containerLogo::-webkit-scrollbar{
+#containerLogo::-webkit-scrollbar {
     width: 10px;
     background: #2E2E2E;
 }
 
-#containerLogo::-webkit-scrollbar-thumb{
+#containerLogo::-webkit-scrollbar-thumb {
     border: 1px solid #2E2E2E;
     background: #e74111;
 }
 
-.categoriesDescription{
+.containerSchoolLogo, .containerPulvSocialNetworks {
+    width: 33%;
+}
 
+.socialLogos {
+    width: 40%;
+}
+
+.containerPulvSocialNetworks img {
+    width: 20%;
+}
+
+.logoBox {
+    margin: auto;
+    display: flex;
+    width: 70%;
+}
+
+.schoolLogos {
+    width: 40%;
+}
+
+.schoolLogos img {
+    width: 33%;
+}
+
+.containerSchoolLogo img {
+    width: 33%;
+}
+
+.mentionsSection{
+    width: 70%;
+    margin: 2vw auto;
+}
+
+.mentionsSection h1{
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 1vw 0;
+    padding-bottom: 1vw;
+    border-bottom: 1px solid #2E2E2E;
 }

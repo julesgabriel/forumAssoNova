@@ -23,7 +23,7 @@
     "title": {
       "type": "string"
     },
-    "urlVideo": {
+    "url": {
       "type": "string"
     }
   }
