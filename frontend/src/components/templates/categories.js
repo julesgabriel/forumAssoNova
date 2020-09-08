@@ -174,7 +174,7 @@ const ContainerLogo = styled.nav`
  
 `
 
-console.log(window.location.href.search('art'));
+
 
 let imageSize = () => {
     if (window.location.href.search('bde') !== -1) {
