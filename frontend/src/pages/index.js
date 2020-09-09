@@ -36,7 +36,7 @@ const IndexPage = () => (
         <section className="keyNumbersSection">
             <ol>
                 <li><CountUp delay={0.1} end={7500} duration={1}/><strong>étudiants</strong></li>
-                <li><CountUp delay={0.1} end={54} duration={1}/><strong>Associations</strong></li>
+                <li><CountUp delay={0.1} end={55} duration={1}/><strong>Associations</strong></li>
                 <li><CountUp delay={0.1} end={5800} duration={1}/><strong>m² de locaux</strong></li>
                 <li><CountUp delay={0.1} end={300} duration={1}/><strong>Entreprises partenaires</strong></li>
             </ol>
@@ -44,7 +44,7 @@ const IndexPage = () => (
         <section className="sectionPresentation">
             <p className="boldText">Le pôle Léonard de Vinci, est composé de 3 écoles (ESILV, EMLV et IIM), regroupant
 
-                plus de <span>7 500 étudiants</span> ! Comme ça fait un bon paquet de monde, et que c’est cool de
+                plus de <span>7 000 étudiants</span> ! Comme ça fait un bon paquet de monde, et que c’est cool de
                 rencontrer des gens
                 quand même,
                 <span> la transversalité</span> entre les écoles est hyper présente : semaines transverses, sport
